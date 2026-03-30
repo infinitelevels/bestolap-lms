@@ -1,0 +1,143 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Page Header CSS
+----------------------------------------*/
+
+.cta-section{
+    background-color: #161E27;
+    position: relative;
+    z-index: 1;
+    @include breakpoint(md){
+        padding: 100px 0;
+    }
+    @include breakpoint(sm){
+        padding: 70px 0;
+    }
+    .cta-bg-img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+        height: 100%;
+        z-index: -1;
+        @include breakpoint(lg){
+            width: 100%;
+        }
+        @include breakpoint(sm){
+            display: none;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: saturate(0);
+            @include breakpoint(lg){
+                object-fit: cover;
+            }
+        }
+        &:before{
+            background: linear-gradient(90deg, #161E27 14.89%, rgba(22, 30, 39, 0.2) 100%);
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+    }
+    .shapes{
+        .shape-1{
+            position: absolute;
+            top: 0;
+            left: 70px;
+            z-index: -1;
+        }
+        .shape-2{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            mix-blend-mode: multiply;
+            @include breakpoint(sm){
+                display: none;
+            }
+        }
+    }
+}
+
+.cta-content{
+    max-width: 871px;
+    width: 100%;
+    .title{
+        color: var(--ed-color-common-white);
+        font-size: 40px;
+        font-weight: 600;
+        @include breakpoint(md){
+            font-size: 36px;
+        }
+        @include breakpoint(sm){
+            font-size: 30px;
+        }
+    }
+    p{
+        color: var(--ed-color-common-white);
+        margin: 25px 0 35px 0;
+    }
+    .cta-btn-wrap{
+        @include flex-vertical-center;
+        column-gap: 20px;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        .cta-btn-2{
+            background-color: transparent;
+            border: 1px solid var(--ed-color-common-white);
+            &:before{
+                background-color: var(--ed-color-theme-primary);
+            }
+            &:hover{
+                border: 1px solid var(--ed-color-theme-primary);
+            }
+        }
+    }
+}
+
+
+// Cta 3
+
+.cta-section-3{
+    @include background;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    .overlay{
+        background: rgba(6, 11, 15, 0.75);
+        mix-blend-mode: multiply;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+.cta-content-3{
+    width: 100%;
+    max-width: 100%;
+    .section-heading{
+        .section-title{
+            font-size: 48px;
+            @include breakpoint(md){
+                font-size: 32px;
+            }
+        }
+    }
+    .cta-btn-wrap{
+        justify-content: center;
+    }
+}
+
+/* !END:  Page Header CSS */

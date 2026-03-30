@@ -1,0 +1,146 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Contact CSS
+----------------------------------------*/
+
+.blog-contact-form.contact-form{
+    border: 1px solid #E0E5EB;
+    margin-top: 0;
+    .request-form{
+        .form-group{
+            .form-item{
+                .form-control{
+                    background-color: transparent;
+                    border: 1px solid #E0E5EB;
+                    &.nice-select{
+                        height: auto;
+                        line-height: inherit;
+                        padding: 15.5px 20px;
+                        &:after{
+                            top: 46%;
+                            width: 10px;
+                            height: 10px;
+                            border-color: var(--ed-color-text-body);
+                            border-bottom: 1px solid var(--ed-color-text-body);
+                            border-right: 1px solid var(--ed-color-text-body);
+                            right: 35px;
+                        }
+                        .list{
+                            background-color: var(--ed-color-common-white);
+                            width: 100%;
+                            li{
+                                padding-left: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .submit-btn{
+        .ed-primary-btn{
+            width: 100%;
+            justify-content: center;
+        }
+    }
+}
+
+.contact-content{
+    border: 1px solid #E0E5EB;
+    padding: 50px;
+    border-radius: 15px;
+    overflow: hidden;
+    @include breakpoint(sm){
+        padding: 30px 20px;
+    }
+    .contact-top{
+        .title{
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            @include breakpoint(sm){
+                font-size: 24px;
+            }
+        }
+        p{
+            margin-bottom: 30px;
+        }
+    }
+    .contact-list{
+        .list-item{
+            display: grid;
+            align-items: center;
+            grid-template-columns: 75px 1fr;
+            grid-gap: 20px;
+            &:not(:last-of-type){
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #DADFEC;
+            }
+            @include breakpoint(sm){
+                grid-template-columns: 1fr;
+            }
+            .icon{
+                background-color: var(--ed-color-common-white);
+                color: var(--ed-color-theme-primary);
+                font-size: 18px;
+                height: 60px;
+                width: 60px;
+                @include flex-center;
+                @include transition(all 0.3s ease-in-out);
+                border-radius: 5px;
+                border: 1px solid #E0E5EB;
+            }
+            .content{
+                .title{
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 1;
+                    margin-bottom: 10px;
+                }
+                p{
+                    margin-bottom: 0;
+                }
+                a{
+                    display: block;
+                }
+                span{
+                    display: block;
+                }
+            }
+            &:hover{
+                .icon{
+                    background-color: var(--ed-color-theme-primary);
+                    color: var(--ed-color-common-white);
+                }
+            }
+        }
+    }
+}
+
+.contact-wrap{
+    background-color: var(--ed-color-grey-1);
+    padding: 60px;
+    align-items: end;
+    @include breakpoint(sm){
+        padding: 40px 20px;
+    }
+    .section-heading{
+        .section-title{
+            margin: 0;
+        }
+    }
+}
+
+#form-messages {
+    display: none;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+#form-messages.alert-success {
+    display: block
+}
+
+/* !END:  Contact CSS */

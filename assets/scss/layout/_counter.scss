@@ -1,0 +1,85 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Counter CSS
+----------------------------------------*/
+
+.counter-section{
+    background-color: var(--ed-color-theme-primary);
+    @include breakpoint(md){
+        padding: 70px 0;
+    }
+}
+
+.counter-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.counter-item{
+    text-align: center;
+    border-right: 1px solid #21BCAF;
+    padding: 120px 0;
+    @include breakpoint(md){
+        padding: 0;
+        border: none;
+    }
+    .title{
+        font-size: 40px;
+        font-weight: 700;
+        @include flex-vertical-center;
+        justify-content: center;
+        margin-bottom: 5px;
+        .odometer-auto-theme{
+            font-family: inherit;
+            line-height: 1;
+        }
+    }
+    p{
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
+    &.item-1{
+        margin-right: auto;
+        margin-left: 0;
+    }
+    &.item-4{
+        border-right: none;
+    }
+}
+
+.counter-card{
+    padding: 40px 20px 45px 20px;
+    border-radius: 10px;
+    border: 1px solid #E0E5EB;
+    .title{
+        color: var(--ed-color-heading-primary);
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 5px;
+        font-family: var(--ed-ff-heading);
+        @include flex-center;
+        .odometer-auto-theme{
+            font-family: inherit;
+            line-height: 1;
+        }
+        .number{
+            margin-top: -3px;
+        }
+    }
+    p{
+        color: var(--ed-color-theme-primary);
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        line-height: 1;
+    }
+}
+
+
+/* !END:  Counter CSS */

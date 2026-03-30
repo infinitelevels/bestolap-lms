@@ -1,0 +1,447 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Page Header CSS
+----------------------------------------*/
+
+// Header CSS
+
+.header-15{
+    .top-bar{
+        background-color: var(--ed-color-theme-primary);
+    }
+    .primary-header-inner{
+        .header-right-wrap{
+            .header-menu-wrap{
+                .sub-menu{
+                    .menu-item-has-children{
+                        &:after{
+                            display: none;
+                        }
+                        ul{
+                            li{
+                                a{
+                                    &:hover{
+                                        color: var(--ed-color-theme-primary);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Hero CSS
+
+.hero-15{
+    background-color: #122927;
+    padding: 285px 0 170px 0;
+    position: relative;
+    z-index: 1;
+    @include breakpoint(md){
+        padding-bottom: 100px;
+    }
+    @include breakpoint(sm){
+        padding: 200px 0 100px 0;
+    }
+    .bg-shapes{
+        .shape-1{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .shape-2{
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            opacity: 0.5;
+        }
+        .shape-3{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.hero-content-15{
+    padding: 0;
+    max-width: 580px;
+    width: 100%;
+    .hero-btn-wrap{
+        .ed-primary-btn{
+            &.active{
+                background-color: var(--ed-color-common-white);
+                color: var(--ed-color-theme-primary);
+                &:before{
+                    background-color: var(--ed-color-theme-primary);
+                }
+                &:hover{
+                    color: var(--ed-color-common-white);
+                }
+            }
+        }
+    }
+}
+
+.hero-img-wrap-15{
+    height: 420px;
+    border: none;
+}
+
+
+// Category CSS
+
+.exam-item-2{
+    background-color: var(--ed-color-common-white);
+    padding: 25px;
+    border: 1px solid #E0E5EB;
+    border-radius: 15px;
+    .exam-thumb{
+        height: 120px;
+        margin-bottom: 20px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        img{
+            border-radius: 15px;
+        }
+        .overlay{
+            background-color: var(--ed-color-theme-primary);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            visibility: hidden;
+            opacity: 0;
+            @include transition(all 0.3s ease-in-out);
+        }
+        .arrow{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            @include transition(all 0.3s ease-in-out);
+            a{
+                background-color: #DFEFEE;
+                color: var(--ed-color-theme-primary);
+                height: 45px;
+                width: 45px;
+                border-radius: 50%;
+                @include flex-center;
+                &:hover{
+                    background-color: var(--ed-color-common-white);
+                }
+            }
+        }
+    }
+    .title{
+        font-size: 24px;
+    }
+    p{
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    &:hover{
+        .exam-thumb{
+            .overlay{
+                visibility: visible;
+                opacity: 1;
+            }
+            .arrow{
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+    }
+}
+
+
+// Team CSS
+
+.team-item-15{
+    box-shadow: 0px 4px 44px rgba(11, 38, 36, 0.18);
+    border-radius: 15px;
+    border: none;
+    .team-thumb-wrap{
+        box-shadow: 0px 4px 44px rgba(11, 38, 36, 0.18);
+        border: 1px solid transparent;
+    }
+}
+
+// Testi CSS
+
+.testi-carousel-wrap-15{
+    position: relative;
+    .swiper-arrow{
+        .swiper-nav{
+            color: var(--ed-color-common-white);
+            height: 60px;
+            width: 60px;
+            border: 1px solid var(--ed-color-common-white);
+            border-radius: 50%;
+            @include flex-center;
+            position: absolute;
+            top: 50%;
+            left: -100px;
+            transform: translateY(-50%);
+            @include transition(all 0.3s ease-in-out);
+            @include breakpoint(xxl){
+                left: -70px;
+            }
+            @include breakpoint(lg){
+                display: none;
+            }
+            &:hover{
+                background-color: var(--ed-color-theme-primary);
+                color: var(--ed-color-common-white);
+                border-color: var(--ed-color-theme-primary);
+            }
+            &.swiper-prev{
+                right: -100px;
+                left: auto;
+                @include breakpoint(xxl){
+                    right: -70px;
+                }
+            }
+        }
+    }
+}
+
+.testi-item-15{
+    @include breakpoint(lg){
+        padding: 30px 20px;
+    }
+    .title{
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    p{
+        margin-bottom: 25px;
+    }
+    .testi-bottom{
+        .quote{
+            opacity: 0.5;
+        }
+    }
+}
+
+// About CSS
+
+.about-section-15{
+    background-color: #F2F4F7;
+    position: relative;
+    z-index: 1;
+    .shapes{
+        @include breakpoint(md){
+            display: none;
+        }
+        .shape-1{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .shape-2{
+            position: absolute;
+            top: 0;
+            right: 220px;
+            z-index: -1;
+        }
+        .shape-3{
+            position: absolute;
+            top: 0;
+            right: 40px;
+            z-index: -1;
+        }
+        .shape-4{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        .shape-5{
+            position: absolute;
+            bottom: 0;
+            right: 80px;
+            z-index: -1;
+        }
+    }
+}
+
+.about-content-15{
+    p{
+        margin-bottom: 30px;
+    }
+    .about-list{
+        list-style: none;
+        margin-bottom: 40px;
+        li{
+            @include flex-vertical-center;
+            column-gap: 10px;
+            font-size: 16px;
+            color: var(--ed-color-heading-primary);
+            font-weight: 500;
+            &:not(:last-of-type){
+                margin-bottom: 10px;
+            }
+            i{
+                color: var(--ed-color-theme-primary);
+            }
+        }
+    }
+}
+
+.about-img-wrap-15{
+    @include flex-vertical-center;
+    max-width: 742px;
+    width: 100%;
+    column-gap: 15px;
+    @include breakpoint(md){
+        margin-top: 40px;
+    }
+    @include breakpoint(sm){
+        flex-direction: column;
+        row-gap: 24px;
+    }
+    .about-img-1{
+        height: 470px;
+        max-width: 416px;
+        width: 100%;
+        @include breakpoint(sm){
+            height: 350px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+    }
+    .about-img-2{
+        height: 395px;
+        max-width: 302px;
+        width: 100%;
+        @include breakpoint(sm){
+            height: 350px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+    }
+}
+
+// Course CSS
+
+.course-item-15{
+    background-color: #F2F4F7;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 608px 1fr;
+    padding: 20px;
+    grid-gap: 40px;
+    border: none;
+    @include transition(all 0.3s ease-in-out);
+    @include breakpoint(lg){
+        grid-template-columns: 450px 1fr;
+    }
+    @include breakpoint(md){
+        grid-template-columns: 1fr;
+    }
+    &:not(:last-of-type){
+        margin-bottom: 30px;
+    }
+    &:hover{
+        background: var(--ed-color-common-white);
+        box-shadow: 0px 4px 44px rgba(11, 38, 36, 0.18);
+        border-radius: 20px;
+    }
+    .course-thumb-wrap{
+        padding: 0;
+        .course-thumb{
+            width: 100%;
+            height: 378px;
+            img{
+                object-position: top;
+            }
+        }
+    }
+    .course-content-wrap{
+        .course-content{
+            padding: 0;
+            padding-bottom: 30px;
+            .title{
+                font-size: 30px;
+                font-weight: 600;
+                @include breakpoint(sm){
+                    font-size: 24px;
+                }
+            }
+            .course-list{
+                margin-bottom: 25px;
+            }
+        }
+        
+        .bottom-content{
+            padding: 0;
+        }
+    }
+}
+
+// Counter CSS
+
+.cta-section-15{
+    position: relative;
+    z-index: 1;
+    .cta-bg{
+        @include background;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+        filter: saturate(0);
+    }
+    .overlay{
+        background: rgba(19, 66, 62, 0.82);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+.counter-item-wrap-15{
+    display: block;
+    max-width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    .counter-item-12{
+        background-color: var(--ed-color-common-white);
+        border: none;
+    }
+}
+
+/* !END:  Page Header CSS */

@@ -1,0 +1,214 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Promo CSS
+----------------------------------------*/
+
+.promo-section{
+    background-color: #191A1F;
+    position: relative;
+    z-index: 1;
+    .bg-shape-1{
+        background: radial-gradient(80.61% 80.61% at 50% 19.39%, rgba(7, 166, 152, 0.2) 0%, rgba(3, 20, 24, 0) 85.76%);
+        filter: blur(125px);
+        width: 1784px;
+        height: 1541px;
+        position: absolute;
+        top: -60%;
+        left: -60%;
+        z-index: -1;
+    }
+    .bg-shape-2{
+        background: radial-gradient(80.61% 80.61% at 50% 19.39%, rgba(7, 166, 152, 0.2) 0%, rgba(3, 20, 24, 0) 85.76%);
+        filter: blur(125px);
+        width: 1784px;
+        height: 1541px;
+        position: absolute;
+        bottom: -140%;
+        right: -60%;
+        z-index: -1;
+    }
+    .shapes{
+        @include breakpoint(md){
+            display: none;
+        }
+        .shape{
+            position: absolute;
+            z-index: -1;
+            &.shape-1{
+                top: 100px;
+                left: 70px;
+            }
+            &.shape-2{
+                top: 50px;
+                right: 0;
+            }
+        }
+    }
+}
+
+.promo-heading{
+    margin-bottom: 100px;
+    @include breakpoint(md){
+        margin-bottom: 80px;
+    }
+    @include breakpoint(sm){
+        margin-bottom: 80px;
+    }
+}
+
+.promo-wrap{
+    @include breakpoint(sm){
+        margin-bottom: -50px;
+    }
+    &>div{
+        padding: 0;
+    }
+}
+
+.promo-item{
+    text-align: center;
+    border-right: 1px dashed rgba(255, 255, 255, 0.17);
+    @include breakpoint(md){
+        border: none;
+    }
+    @include breakpoint(sm){
+        margin-bottom: 50px;
+    }
+    .promo-thumb{
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        margin: 0 auto;
+        position: relative;
+        margin-bottom: 30px;
+        .icon{
+            background-color: var(--ed-color-theme-primary);
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            border: 4px solid var(--ed-color-heading-primary);
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            @include flex-center;
+        }
+        .main-img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .title{
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    p{
+        margin-bottom: 0;
+        line-height: 1.6;
+        @include breakpoint(sm){
+            br{
+                display: none;
+            }
+        }
+    }
+    &.item-3{
+        border: none;
+    }
+}
+
+// Promo 2
+
+.promo-item-2{
+    text-align: center;
+    border: 1px solid #E0E5EB;
+    border-radius: 12px;
+    padding: 40px 30px;
+    position: relative;
+    @include breakpoint(lg){
+        padding: 30px 20px;
+    }
+    .number{
+        color: rgba(7, 166, 152, 0.15);
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1;
+        position: absolute;
+        top: 40px;
+        left: 30px;
+        @include transition(all 0.3s ease-in-out);
+        @include breakpoint(lg){
+            font-size: 30px;
+            top: 30px;
+            left: 20px;
+        }
+    }
+    .icon{
+        @include flex-center;
+        height: 100px;
+        width: 100px;
+        border: 1px solid #E0E5EB;
+        border-radius: 50%;
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+    .title{
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        @include breakpoint(lg){
+            font-size: 18px;
+        }
+    }
+    &:hover{
+        .number{
+            color: var(--ed-color-theme-primary);
+        }
+    }
+}
+
+// Promo 3
+
+.promo-section-3{
+    background-color: #162726;
+}
+
+.promo-item-3{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 75px 1fr;
+    grid-gap: 15px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    @include breakpoint(lg){
+        grid-template-columns: 1fr;
+    }
+    .icon{
+        background-color: rgba(7, 166, 152, 0.1);
+        height: 75px;
+        width: 75px;
+        @include flex-center;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        @include transition(all 0.3s ease-in-out);
+    }
+    .content{
+        .title{
+            font-size: 22px;
+            font-weight: 600;
+        }
+        p{
+            margin-bottom: 0;
+        }
+    }
+    &:hover{
+        .icon{
+            background-color: var(--ed-color-theme-primary);
+        }
+    }
+}
+
+
+/* !END:  Promo CSS */

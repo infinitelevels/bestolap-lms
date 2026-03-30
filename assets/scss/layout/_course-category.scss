@@ -1,0 +1,59 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Course Category CSS
+----------------------------------------*/
+
+.course-category{
+    background-color: var(--ed-color-grey-1);
+}
+
+.category-items{
+    @include flex-vertical-center;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 17px;
+    &:not(:last-of-type){
+        margin-bottom: 17px;
+    }
+    .category-item{
+        &:not(:last-of-type){
+            margin-right: 17px;
+        }
+        a{
+            background-color: var(--ed-color-common-white);
+            color: var(--ed-color-heading-primary);
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1;
+            padding: 7.5px 30px 7.5px 5px;
+            display: inline-flex;
+            align-items: center;
+            column-gap: 15px;
+            border-radius: 100px;
+            border: 1px solid #E0E5EB;
+            @include breakpoint(sm){
+                font-size: 14px;
+                padding: 7.5px 20px 7.5px 5px;
+            }
+            &:hover{
+                background-color: var(--ed-color-theme-primary);
+                color: var(--ed-color-common-white);
+            }
+            span{
+                background-color: var(--ed-color-grey-1);
+                height: 50px;
+                width: 50px;
+                @include flex-center;
+                border-radius: 50%;
+                img{
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+        }
+    }
+}
+
+
+/* !END: Course Category CSS */

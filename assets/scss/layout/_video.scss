@@ -1,0 +1,80 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Video CSS
+----------------------------------------*/
+
+.video-feature{
+    background: var(--ed-color-common-white);
+    border: 1px solid #E0E5EB;
+    border-radius: 10px;
+    padding: 20px;
+    @include transition(all 0.3s ease-in-out);
+    .video-thumb{
+        position: relative;
+        height: 330px;
+        margin-bottom: 30px;
+        img{
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .video-btn{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            a{
+                background-color: var(--ed-color-common-white);
+                color: var(--ed-color-theme-primary);
+                height: 100px;
+                width: 100px;
+                font-size: 30px;
+                border-radius: 50%;
+                @include flex-center;
+                position: relative;
+                z-index: 1;
+                &:hover{
+                    background-color: var(--ed-color-theme-primary);
+                    color: var(--ed-color-common-white);
+                }
+                .ripple{
+                    height: 100px;
+                    width: 100px;
+                    &:before,
+                    &:after{
+                        height: 100px;
+                        width: 100px;
+                    }
+                }
+            }
+        }
+    }
+    .video-content{
+        .title{
+            font-size: 30px;
+            @include breakpoint(md){
+                font-size: 24px;
+                @include breakpoint(md){
+                    font-size: 22px;
+                    br{
+                        display: none;
+                    }
+                }
+            }
+        }
+        p{
+            @include breakpoint(md){
+                br{
+                    display: none;
+                }
+            }
+        }
+    }
+    &:hover{
+        box-shadow: 0px 11px 44px 4px rgba(18, 31, 49, 0.1);
+    }
+}
+
+/* !END: Video CSS */

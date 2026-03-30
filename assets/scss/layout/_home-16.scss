@@ -1,0 +1,576 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Home 16 CSS
+----------------------------------------*/
+
+// Header 16 CSS
+
+.header-16{
+    border-bottom: 1px solid var(--ed-color-border-1);
+    .top-bar{
+        .top-bar-inner{
+            .top-bar-right{
+                .register-box{
+                    margin-right: 0;
+                    padding-right: 0;
+                    border: none;
+                }
+            }
+        }
+    }
+    .primary-header-inner{
+        .header-left-inner{
+            .header-menu-wrap{
+                padding-left: 0;
+                margin-left: 0;
+                border: none;
+                .sub-menu{
+                    li{
+                        &.mega-menu{
+                            ul{
+                                left: 15%!important;
+                                @include breakpoint(xxl){
+                                    left: 5%!important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .top-social-wrap{
+            @include flex-vertical-center;
+            @include breakpoint(lg){
+                display: none;
+            }
+            span{
+                color: var(--ed-color-heading-primary);
+            }
+            .social-list{
+                margin-left: 20px;
+                li{
+                    display: inline-flex;
+                    align-items: center;
+                    &:not(:last-of-type){
+                        margin-right: 10px;
+                    }
+                    a{
+                        color: var(--ed-color-heading-primary);
+                        &:hover{
+                            color: var(--ed-color-theme-primary)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Hero CSS
+
+.hero-wrap-16{
+    padding: 90px;
+    background: linear-gradient(270deg, #07A698 0%, #03403B 81.33%);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    margin-top: 30px;
+    @include breakpoint(md){
+        padding: 90px 30px;
+    }
+    @include breakpoint(sm){
+        padding: 50px 20px;
+    }
+    .hero-men{
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+        z-index: -1;
+        @include breakpoint(md){
+            display: none;
+        }
+    }
+    .shapes{
+        .shape-1{
+            position: absolute;
+            top: 0;
+            left: 40%;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+        .shape-2{
+            position: absolute;
+            top: 20%;
+            right: 50px;
+            z-index: -1;
+        }
+        .shape-3{
+            position: absolute;
+            bottom: 0;
+            left: 20px;
+            z-index: -1;
+        }
+    }
+}
+
+.hero-content-16{
+    .section-heading{
+        margin-bottom: 40px;
+        .sub-heading{
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(50px);
+            border-radius: 100px;
+            color: var(--ed-color-common-white);
+            .heading-icon{
+                background-color: var(--ed-color-theme-primary);
+                color: var(--ed-color-common-white);
+            }
+        }
+        .section-title{
+            font-size: 40px;
+            br{
+                display: block;
+            }
+            @include breakpoint(sm){
+                font-size: 32px;
+            }
+        }
+    }
+    .hero-items{
+        @include flex-vertical-center;
+        column-gap: 40px;
+        margin-bottom: 40px;
+        @include breakpoint(sm){
+            flex-wrap: wrap;
+            row-gap: 20px;
+        }
+        .hero-item{
+            display: grid;
+            align-items: center;
+            grid-template-columns: 50px 1fr;
+            grid-gap: 15px;
+            .icon{
+                background-color: var(--ed-color-common-white);
+                height: 50px;
+                width: 50px;
+                @include flex-center;
+                border-radius: 50%;
+            }
+            .item-title{
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+        }
+    }
+    .hero-btn-wrap{
+        .ed-primary-btn{
+            background-color: var(--ed-color-common-white);
+            color: var(--ed-color-theme-primary);
+            &:hover{
+                color: var(--ed-color-common-white);
+            }
+            &:before{
+                background-color: var(--ed-color-theme-primary);
+            }
+        }
+    }
+}
+
+
+// Category CSS
+
+.category-wrap-16{
+    background-color: #F2F4F7;
+    padding: 20px;
+    border-radius: 15px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 24px;
+    margin-top: 20px;
+    @include breakpoint(md){
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include breakpoint(sm){
+        grid-template-columns: 1fr;
+    }
+    .cat-item{
+        background-color: var(--ed-color-common-white);
+        .icon{
+            background-color: var(--ed-color-grey-1);
+            @include transition(all 0.3s ease-in-out);
+        }
+        &:hover{
+            .icon{
+                background-color: var(--ed-color-common-white);
+            }
+        }
+    }
+}
+
+
+// Promo CSS
+
+.promo-item-16{
+    background-color: var(--ed-color-grey-1);
+    border-radius: 15px;
+    border: 1px solid #E0E5EB;
+    padding: 45px 20px 20px 20px;
+    @include transition(all 0.3s ease-in-out);
+    @include breakpoint(sm){
+        padding: 30px 15px 20px 15px;
+    }
+    .icon{
+        background-color: var(--ed-color-common-white);
+        height: 113px;
+        width: 113px;
+        @include flex-center;
+        border-radius: 50%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    .promo-content{
+        background-color: var(--ed-color-common-white);
+        padding: 25px 20px 20px 20px;
+        border: 1px solid #E0E5EB;
+        border-radius: 15px;
+        .title{
+            @include breakpoint(sm){
+                font-size: 18px;
+            }
+        }
+        p{
+            margin-bottom: 0;
+            margin-top: 10px;
+            @include breakpoint(sm){
+                font-size: 14px;
+            }
+        }
+    }
+    &:hover{
+        transform: translateY(-5px);
+    }
+}
+
+// Category CSS
+
+.ct-16{
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    @include transition(all 0.3s ease-in-out);
+    .ct-thumb{
+        height: 220px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+    }
+    .ct-content{
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        a{
+            background-color: var(--ed-color-common-white);
+            font-family: var(--ed-ff-heading);
+            color: var(--ed-color-heading-primary);
+            @include flex-vertical-center;
+            width: 100%;
+            @include flex-vertical-center;
+            justify-content: space-between;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1;
+            padding: 17px 20px;
+            border-radius: 8px;
+            &:hover{
+                background-color: var(--ed-color-theme-primary);
+                color: var(--ed-color-common-white);
+            }
+        }
+    }
+    &:hover{
+        transform: translateY(-5px);
+    }
+}
+
+
+// Faq CSS
+
+.faq-content-16{
+    max-width: 100%;
+    margin-top: 0;
+    .faq-accordion{
+        max-width: 586px;
+        width: 100%;
+        @include  breakpoint(md){
+            max-width: 100%
+        }
+        .accordion-item{
+            @include transition (all 0.3s ease-in-out);
+            border: 1px solid #E0E5EB;
+            border-radius: 5px;
+            overflow: hidden;
+            &:not(:last-of-type){
+                margin-bottom: 15px;
+            }
+            .accordion-button{
+                padding: 20px 30px;
+                border: none;
+                box-shadow: none;
+                outline: none;
+                &:not(.collapsed){
+                    border: none;
+                }
+            }
+            &.active{
+                background-color: var(--ed-color-common-white);
+                box-shadow: 0px 9px 36px rgba(15, 34, 32, 0.23);
+            }
+            .accordion-body{
+                padding: 0 30px 20px 30px;
+                color: #6C706F;
+            }
+        }
+    }
+}
+
+.faq-img-wrap-16{
+    max-width: 652px;
+    width: 100%;
+    height: 560px;
+    position: relative;
+    .faq-img-1{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        max-width: 460px;
+        width: 100%;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            object-position: top;
+        }
+    }
+    .faq-img-2{
+        position: absolute;
+        right: 0;
+        bottom: 18%;
+        max-width: 300px;
+        width: 100%;
+        height: 267px;
+        box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.12);
+        border-radius: 15px;
+        @include  breakpoint(sm){
+            bottom: 0;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 6px solid var(--ed-color-common-white);
+        }
+    }
+}
+
+// Blog CSS
+
+.post-card-16{
+    padding: 0;
+    border: none;
+    grid-gap: 0;
+    .post-thumb{
+        height: 243px;
+        margin-bottom: 15px;
+        img{
+            border-radius: 15px;
+            @include transition(all 0.3s ease-in-out);
+        }
+    }
+    .post-content-wrap{
+        .post-content{
+            .post-meta{
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+                border-bottom: 1px dashed #D1DBDA;
+                li{
+                    color: var(--ed-color-text-body);
+                    line-height: 1;
+                    i{
+                        color: var(--ed-color-text-body);
+                    }
+                }
+            }
+            .title{
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border: none;
+            }
+        }
+    }
+    &:hover{
+        .post-thumb{
+            img{
+                transform: scale(1.02);
+            }
+        }
+    }
+}
+
+.sponsor-16{
+    padding-top: 120px;
+    @include breakpoint(md){
+        padding-top: 80px;
+    }
+    @include breakpoint(sm){
+        padding-top: 60px;
+    }
+}
+
+// Footer 16
+
+.footer-top-content-16{
+    padding-bottom: 70px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.footer-16{
+    background-color: #162726;
+    .footer-top{
+        background-color: transparent;
+        padding: 0;
+        border: none;
+        margin-bottom: 0;
+        .title{
+            @include flex-vertical-center;
+            column-gap: 25px;
+            text-align: left;
+            @include breakpoint(sm){
+                flex-direction: column;
+                row-gap: 10px;
+                align-items: baseline;
+            }
+            span{
+                background-color: var(--ed-color-theme-primary);
+                height: 80px;
+                width: 80px;
+                @include flex-center;
+                border-radius: 50%;
+            }
+        }
+    }
+    .footer-wrap{
+        margin-bottom: 0;
+        overflow: hidden;
+        @include breakpoint(md){
+            margin-top: 70px;
+            padding-bottom: 30px;
+        }
+        .footer-widget{
+            padding-top: 100px;
+            padding-bottom: 100px;
+            position: relative;
+            @include breakpoint(md){
+                padding: 0;
+            }
+            &:before{
+                background-color: rgba(255, 255, 255, 0.09);
+                content: "";
+                width: 1px;
+                height: 150%;
+                position: absolute;
+                top: 0; 
+                right: 0;
+                @include breakpoint(md){
+                    display: none;
+                }
+            }
+            &.widget-3{
+                &:before{
+                    display: none;
+                }
+            }
+            p{
+                max-width: 480px;
+                width: 100%;
+            }
+            .footer-download{
+                .download-title{
+                    color: var(--ed-color-common-white);
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin-bottom: 20px;
+                }
+                .download-items{
+                    @include flex-vertical-center;
+                    flex-wrap: wrap;
+                    column-gap: 30px;
+                    row-gap: 20px;
+                    .download-item{
+                        background-color: #425454;
+                        @include flex-vertical-center;
+                        column-gap: 10px;
+                        padding: 7px 30px;
+                        border-radius: 100px;
+                        .icon{
+                            color: var(--ed-color-common-white);
+                            font-size: 30px;
+                        }
+                        .content{
+                            p{
+                                font-family: var(--ed-ff-heading);
+                                font-size: 12px;
+                                color: var(--ed-color-common-white);
+                                margin-bottom: 0px;
+                                line-height: 1;
+                            }
+                            .title{
+                                color: var(--ed-color-common-white);
+                                font-size: 16px;
+                                margin-bottom: 0;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .copyright-content-16{
+        @include flex-vertical-center;
+        justify-content: space-between;
+        .copyright-list{
+            list-style: none;
+            @include flex-vertical-center;
+            flex-wrap: wrap;
+            row-gap: 10px;
+            @include breakpoint(sm){
+                justify-content: center;
+            }
+            li{
+                color: var(--ed-color-common-white);
+                font-size: 16px;
+                font-weight: 400;
+                display: block;
+                &:not(:last-of-type){
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+/* !END: Home 16 CSS */

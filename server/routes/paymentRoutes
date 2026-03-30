@@ -1,0 +1,13 @@
+import express from "express";
+import verifyPaystack from "../middleware/verifyPaystack.js";
+import { handleWebhook } from "../controllers/webhookController.js";
+
+const router = express.Router();
+
+router.post(
+  "/webhook",
+  verifyPaystack,
+  handleWebhook
+);
+
+export default router;

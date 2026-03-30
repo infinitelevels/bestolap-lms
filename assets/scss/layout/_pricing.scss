@@ -1,0 +1,182 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Page Header CSS
+----------------------------------------*/
+
+.pricing__tab .nav-tabs {
+    border: none;
+}
+
+.pricing__tab .nav .nav-item .nav-link {
+    padding: 0;
+    padding-right: 90px;
+    background: transparent;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--ed-color-heading-primary);
+    text-transform: capitalize;
+    position: relative;
+    outline: none;
+    font-size: 16px;
+    border: none;
+}
+.pricing__tab .nav .nav-item .nav-link:focus {
+    outline: none;
+}
+
+.pricing__tab .nav .nav-item .nav-link::after {
+    background-color: var(--ed-color-grey-1);
+    position: absolute;
+    content: "";
+    right: 15px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 54px;
+    height: 22px;
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    border-radius: 11px;
+}
+
+.pricing__tab .nav .nav-item .nav-link::before {
+    background-color: var(--ed-color-theme-primary);
+    position: absolute;
+    content: "";
+    right: 20px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    z-index: 1;
+    @include transition(all 0.3s ease-in-out);
+}
+
+.pricing__tab .nav .nav-item .nav-link.active {
+    color: var(--ed-color-theme-primary);
+    border: none;
+}
+
+.pricing__tab .nav .nav-item .nav-link.active::before {
+    right: 49px;
+}
+
+.pricing__tab .nav .nav-item:last-child .nav-link {
+    padding-right: 0;
+}
+
+.pricing__tab .nav .nav-item:last-child .nav-link::after {
+    display: none;
+}
+
+.pricing__tab .nav .nav-item:last-child .nav-link::before {
+    display: none;
+}
+
+
+.pricing-item{
+    background-color: var(--ed-color-grey-1);
+    padding: 35px 30px;
+    border-radius: 15px;
+    .pricing-top{
+        background-color: var(--ed-color-common-white);
+        border: 1px solid #E0E5EB;
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px;
+        .title{
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .price{
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 15px;
+            span{
+                color: var(--ed-color-heading-primary);
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+        p{
+            margin-bottom: 0;
+        }
+    }
+    .pricing-list{
+        list-style: none;
+        li{
+            font-size: 16px;
+            line-height: 1;
+            i{
+                color: var(--ed-color-theme-primary);
+                margin-right: 10px;
+            }
+            &:not(:last-of-type){
+                margin-bottom: 15px;
+            }
+            &.cross{
+                i{
+                    color: var(--ed-color-text-body);
+                }
+            }
+        }
+    }
+    .pricing-btn{
+        margin-top: 30px;
+        .ed-primary-btn{
+            background-color: var(--ed-color-common-white);
+            color: var(--ed-color-theme-primary);
+            width: 100%;
+            justify-content: center;
+            border: 1px solid var(--ed-color-theme-primary);
+            font-weight: 600;
+            &:before{
+                background-color: var(--ed-color-theme-primary);
+            }
+            &:hover{
+                color: var(--ed-color-common-white);
+            }
+        }
+    }
+    &.active{
+        .pricing-top{
+            background-color: var(--ed-color-theme-primary);
+            .title{
+                color: var(--ed-color-common-white);
+            }
+            .price{
+                color: var(--ed-color-common-white);
+                span{
+                    color: var(--ed-color-common-white);
+                }
+            }
+            p{
+                color: var(--ed-color-common-white);
+            }
+        }
+        .pricing-btn{
+            .ed-primary-btn{
+                background-color: var(--ed-color-theme-primary);
+                color: var(--ed-color-common-white);
+            }
+        }
+    }
+}
+
+/* !END:  Page Header CSS */

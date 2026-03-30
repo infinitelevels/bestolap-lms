@@ -1,0 +1,477 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Page Header CSS
+----------------------------------------*/
+
+// Header 19
+
+.header-19{
+    .top-bar{
+        background-color: #fafafb;
+        .top-bar-inner{
+            .top-bar-right{
+                .register-box{
+                    margin-right: 20px;
+                    padding-right: 20px;
+                    border-right: 1px solid rgba(22, 39, 38, 0.11);
+                    a{
+                        color: var(--ed-color-heading-primary);
+                        &:hover{
+                            color: var(--ed-color-theme-primary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .primary-header-inner{
+        .header-right-wrap{
+            @include flex-vertical-center;
+            column-gap: 60px;
+            @include breakpoint(xxl){
+                column-gap: 50px;
+            }
+            @include breakpoint(lg){
+                column-gap: 20px;
+            }
+        }
+    }
+}
+
+// Hero CSS
+
+.hero-section-19{
+    background-color: #F2F4F7;
+    position: relative;
+    z-index: 1;
+    .hero-img-19{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        @include breakpoint(xxl){
+            max-width: 750px;
+            width: 100%;
+        }
+        @include breakpoint(lg){
+            max-width: 550px;
+            width: 100%;
+        }
+        @include breakpoint(md){
+            display: none;
+        }
+    }
+    .bg-color{
+        background-color: var(--ed-color-common-white);
+        width: 100%;
+        height: 225px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .shapes{
+        .shape-1{
+            position: absolute;
+            bottom: 225px;
+            right: 0;
+            z-index: -1;
+        }
+        .shape-2{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .shape-3{
+            position: absolute;
+            left: 0;
+            top: 20%;
+            z-index: -1;
+            @include breakpoint(xl){
+                display: none;
+            }
+        }
+        .shape-4{
+            position: absolute;
+            right: 40px;
+            top: 25%;
+            z-index: -1;
+        }
+    }
+}
+
+.hero-content-19{
+    padding-bottom: 195px;
+    @include breakpoint(md){
+        padding-bottom: 100px;
+    }
+    .section-heading{
+        .sub-heading{
+            color: var(--ed-color-theme-primary);
+        }
+        .section-title{
+            color: var(--ed-color-heading-primary);
+            @include breakpoint(sm){
+                font-size: 26px;
+            }
+            br{
+                display: block;
+            }
+            span{
+                font-weight: 600;
+            }
+        }
+    }
+    p{
+        font-size: 18px;
+        max-width: 600px;
+        width: 100%;
+        color: var(--ed-color-text-body);
+    }
+    .hero-btn-wrap{
+        margin-bottom: 0;
+        .video-btn{
+            background-color: var(--ed-color-common-white);
+            color: var(--ed-color-heading-primary);
+            &:before{
+                background-color: var(--ed-color-theme-primary);
+            }
+            &:hover{
+                color: var(--ed-color-common-white);
+            }
+        }
+    }
+}
+
+.hero-sponsor-wrap{
+    position: relative;
+    z-index: 1;
+    padding-bottom: 40px;
+    margin-bottom: 120px;
+    @include breakpoint(md) {
+        margin-bottom: 70px;
+    }
+    @include breakpoint(sm) {
+        margin-bottom: 60px;
+    }
+    &:before{
+        background: rgba(255, 255, 255, 0.31);
+        border: 1px solid rgba(255, 255, 255, 0.64);
+        box-shadow: 0px 4px 30px rgba(25, 38, 48, 0.03);
+        backdrop-filter: blur(16px);
+        border-radius: 15px;
+        content: "";
+        width: 95%;
+        height: 120px;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+    &:after{
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.64);
+        backdrop-filter: blur(60px);
+        border-radius: 15px;
+        content: "";
+        width: 90%;
+        height: 120px;
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -2;
+    }
+}
+
+.hero-sponsor{
+    background-color: var(--ed-color-common-white);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1; 
+    .sponsor-2{
+        background-color: var(--ed-color-common-white);
+        padding: 0;
+        .sponsor-item{
+            padding: 0;
+            border: none;
+        }
+    }
+}
+
+.hero-about-area{
+    background-color: var(--ed-color-common-white);
+    box-shadow: 0px 17px 48px rgba(13, 32, 30, 0.11);
+    border-radius: 15px;
+    padding: 60px 60px 60px 80px;
+    @include breakpoint(md){
+        padding: 50px 30px;
+    }
+    
+    @include breakpoint(sm){
+        padding: 50px 20px;
+    }
+}
+
+.about-content-19{
+    @include breakpoint(md){
+        margin-bottom: 40px;
+    }
+    .title{
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+    .about-list{
+        margin-bottom: 30px;
+        li{
+            @include flex-vertical-center;
+            column-gap: 10px;
+            align-items: start;
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--ed-color-text-body);
+            &:not(:last-of-type){
+                margin-bottom: 20px;
+            }
+            i{
+                color: var(--ed-color-theme-primary);
+            }
+        }
+    }
+}
+
+.about-img-19{
+    max-width: 568px;
+    width: 100%;
+    height: 335px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+// Feature CSS
+
+.feature-card-19{
+    border: 2px solid transparent;
+    .icon{
+        @include transition(all 0.3s ease-in-out);
+        img{
+            @include transition(all 0.3s ease-in-out);
+        }
+    }
+    .content{
+        p{
+            margin-bottom: 20px;
+        }
+    }
+    .feature-btn{
+        color: var(--ed-color-theme-primary);
+        font-size: 16px;
+        font-weight: 600;
+        @include flex-vertical-center;
+        justify-content: center;
+        column-gap: 10px;
+    }
+    &:hover{
+        border-color: var(--ed-color-theme-primary);
+        .icon{
+            background-color: var(--ed-color-theme-primary);
+            img{
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+}
+
+// Course CSS
+
+.course-section-19{
+    background-color: #1A2226;
+    position: relative;
+    z-index: 1;
+    .shapes{
+        .shape-1{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .shape-2{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+        }
+        .shape-3{
+            position: absolute;
+            top: 60px;
+            left: 45px;
+            z-index: -1;
+        }
+        .shape-4{
+            position: absolute;
+            top: 0;
+            right: 200px;
+            z-index: -1;
+        }
+        .shape-5{
+            position: absolute;
+            bottom: 200px;
+            right: 50px;
+            z-index: -1;
+        }
+    }
+}
+
+// Video CSS
+
+.video-area-19{
+    @include background;
+    width: 100%;
+    height: 100%;
+    padding: 205px 0;
+    @include breakpoint(md){
+        padding: 150px 0;
+    }
+}
+
+.video-btn-wrapper{
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    @include flex-center;
+    margin: 0 auto;
+    .video-btn{
+        height: 110px;
+        width: 110px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        @include flex-center;
+        a{
+            background-color: var(--ed-color-common-white);
+            color: var(--ed-color-theme-primary);
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            @include flex-center;
+            &:hover{
+                background-color: var(--ed-color-theme-primary);
+                color: var(--ed-color-common-white);
+            }
+        }
+    }
+}
+
+// Counter CSS
+
+.counter-section-19{
+    background-color: var(--ed-color-theme-primary);
+    position: relative;
+    z-index: 1;
+    .shape{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+}
+
+.counter-wrap-19{
+    background-color: var(--ed-color-common-white);
+    @include flex-vertical-center;
+    padding: 0 50px;
+    border-radius: 15px;
+    @include breakpoint(md){
+        padding: 0 30px;
+    }
+    @include breakpoint(sm){
+        flex-direction: column;
+        row-gap: 30px;
+        align-items: baseline;
+        padding: 30px;
+    }
+    .counter-item-19{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 45px 1fr;
+        grid-gap: 15px;
+        padding: 45px 0px;
+        @include breakpoint(md){
+            grid-template-columns: 1fr;
+        }
+        @include breakpoint(sm){
+            align-items: baseline;
+            padding: 0;
+        }
+        &:not(:last-of-type){
+            margin-right: 60px;
+            padding-right: 60px;
+            border-right: 1px solid #DEE7E4;
+            @include breakpoint(xl){
+                margin-right: 40px;
+                padding-right: 40px;
+            }
+            @include breakpoint(lg){
+                margin-right: 30px;
+                padding-right: 30px;
+            }
+            @include breakpoint(sm){
+                padding: 0;
+                margin: 0;
+                border: none;
+            }
+        }
+        .content{
+            p{
+                font-size: 18px;
+                font-weight: 500;
+                color: var(--ed-color-heading-primary);
+                margin-bottom: 0;
+                @include breakpoint(lg){
+                    font-size: 15px;
+                }
+            }
+            .title{
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 0;
+                line-height: 1;
+                .odometer-auto-theme{
+                    font-family: inherit;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+}
+
+// Blog 19
+
+.blog-19{
+    position: relative;
+    z-index: 1;
+    .shape-1{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .shape-2{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+}
+
+/* !END:  Page Header CSS */

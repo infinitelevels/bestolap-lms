@@ -1,0 +1,569 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Home 11 CSS
+----------------------------------------*/
+
+// About 11
+
+.about-section-11{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    .shape-1{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background: linear-gradient(180deg, rgba(7, 166, 152, 0.075) 86.03%, rgba(7, 166, 152, 0) 100%);
+        filter: blur(275px);
+        width: 1537px;
+        height: 777px;
+        position: absolute;
+        bottom: -285px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .shape-2{
+        position: absolute;
+        bottom: 25%;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+.about-img-wrap-11{
+    max-width: 603px;
+    width: 100%;
+    height: 483px;
+    position: relative;
+    z-index: 1;
+    @include breakpoint(md){
+        margin-bottom: 40px;
+    }
+    .about-img-1{
+        max-width: 326px;
+        width: 100%;
+        height: 309px;
+        position: absolute;
+        bottom: 45px;
+        left: 0;
+        z-index: 1;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 4px solid var(--ed-color-common-white);
+        }
+    }
+    .about-img-2{
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 353px;
+        width: 100%;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+    }
+    .about-exp{
+        background-color: var(--ed-color-theme-primary);
+        padding: 15px 30px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include flex-vertical-center;
+        border-radius: 15px;
+        .title{
+            color: var(--ed-color-common-white);
+            font-size: 60px;
+            font-weight: 600;
+            margin-bottom: 0;
+            line-height: 1;
+            .odometer-auto-theme{
+                font-family: inherit;
+                line-height: 1;
+            }
+        }
+        p{
+            color: var(--ed-color-common-white);
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 0;
+            line-height: 1.3;
+            margin-left: 15px;
+        }
+    }
+}
+
+.about-content-11{
+    p{
+        margin-bottom: 30px;
+    }
+    .about-list{
+        margin-bottom: 40px;
+        li{
+            color: var(--ed-color-heading-primary);
+            @include flex-vertical-center;
+            column-gap: 10px;
+            font-size: 16px;
+            font-weight: 500;
+            &:not(:last-of-type){
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .about-items{
+        @include flex-vertical-center;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        margin-bottom: 40px;
+        .about-item{
+            display: grid;
+            align-items: center;
+            grid-template-columns: 40px 1fr;
+            grid-gap: 10px;
+            &:not(:last-of-type){
+                margin-right: 50px;
+                @include breakpoint(lg){
+                    margin-right: 30px;
+                }
+            }
+            .icon{
+                color: var(--ed-color-theme-primary);
+                @include flex-center;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                border: 1px solid #E0E5EB;
+                box-shadow: 0px 4px 24px rgba(12, 28, 26, 0.19);
+            }
+            .title{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.about-counter-item-2{
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 7px 48px rgba(18, 38, 37, 0.13);
+    backdrop-filter: blur(45px);
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    @include transition(all 0.3s ease-in-out);
+    @include breakpoint(lg){
+        background-color: var(--ed-color-common-white);
+        padding: 30px 20px;
+    }
+    @include breakpoint(sm){
+        padding: 30px 20px;
+    }
+    .shape{
+        background: rgba(7, 166, 152, 0.6);
+        filter: blur(75px);
+        width: 151px;
+        height: 151px;
+        position: absolute;
+        top: -80px;
+        left: -100px;
+        z-index: -1;
+    }
+
+    .icon{
+        background-color: var(--ed-color-common-white);
+        width: 80px;
+        height: 80px;
+        box-shadow: 0px 13px 36px rgba(55, 152, 147, 0.27);
+        border-radius: 50%;
+        @include flex-center;
+        margin-bottom: 30px;
+    }
+    .title{
+        color: var(--ed-color-theme-primary);
+        font-size: 44px;
+        font-weight: 700;
+        @include flex-vertical-center;
+        margin-bottom: 0;
+        .odometer-auto-theme{
+            font-family: inherit;
+            line-height: 1;
+        }
+    }
+    p{
+        font-weight: 500;
+        color: var(--ed-color-heading-primary);
+        margin-bottom: 0;
+    }
+    &:hover{
+        transform: translateY(-5px);
+    }
+}
+
+// Course CSS
+
+.course-carousel-4{
+    overflow: visible;
+}
+
+.course-item-11{
+    background: var(--ed-color-common-white);
+    box-shadow: 0px 5px 40px rgba(15, 39, 37, 0.15);
+    border-radius: 10px;
+    .course-thumb{
+        height: 200px;
+        padding: 10px;
+        margin-bottom: 20px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 15px;
+        }
+    }
+    .course-content{
+        padding: 0 30px;
+        padding-bottom: 30px;
+        .title{
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        ul{
+            padding-left: 15px;
+            li{
+                &:not(:last-of-type){
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}
+
+// Sponsor CSS
+
+.sponsor-2{
+    background-color: var(--ed-color-theme-primary);
+    padding-top: 120px;
+    @include breakpoint(md){
+        padding-top: 70px;
+    }
+    @include breakpoint(sm){
+        padding-top: 60px;
+    }
+}
+
+// Cta CSS
+
+.cta-section-11{
+    background-color: #1F2A2A;
+    position: relative;
+    z-index: 1;
+    .cta-bg-shape-1{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+    .cta-bg-shape-2{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+    .cta-bg-shape-3{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        @include breakpoint(md){
+            height: 100%;
+            img{
+                height: 100%;
+            }
+        }
+    }
+}
+
+.cta-wrap-11{
+    position: relative;
+    z-index: 1;
+    @include breakpoint(md){
+        padding-bottom: 0;
+    }
+    @include breakpoint(sm){
+        padding-bottom: 60px;
+    }
+    .cta-content{
+        position: relative;
+        z-index: 5;
+        .section-heading{
+            .section-title{
+                br{
+                    display: block;
+                }
+            }
+        }
+        .cta-contact-box{
+            @include flex-vertical-center;
+            column-gap: 20px;
+            @include breakpoint(sm){
+                flex-wrap: wrap;
+                row-gap: 20px;
+            }
+            .cta-video{
+                height: 141px;
+                width: 169px;
+                position: relative;
+                border-radius: 10px;
+                overflow: hidden;
+                .video-img{
+                    position: relative;
+                    &:before{
+                        background-color: rgba(8, 35, 33, 0.59);
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .video-popup{
+                    background-color: var(--ed-color-theme-primary);
+                    color: var(--ed-color-common-white);
+                    @include flex-center;
+                    height: 48px;
+                    width: 48px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border-radius: 50%;
+                    z-index: 2;
+                    &:hover{
+                        background-color: var(--ed-color-common-white);
+                        color: var(--ed-color-theme-primary);
+                    }
+                }
+            }
+            .contact-list{
+                list-style: none;
+                li{
+                    &:not(:last-of-type){
+                        margin-bottom: 20px;
+                    }
+                    a{
+                        background: rgba(255, 255, 255, 0.06);
+                        display: inline-block;
+                        height: 62px;
+                        border: 1px solid rgba(255, 255, 255, 0.09);
+                        backdrop-filter: blur(50px);
+                        border-radius: 5px;
+                        font-size: 18px;
+                        color: var(--ed-color-common-white);
+                        padding: 0 20px;
+                        @include flex-center;
+                        &:hover{
+                            color: var(--ed-color-theme-primary);
+                        }
+                        i{
+                            background-color: var(--ed-color-common-white);
+                            color: var(--ed-color-theme-primary);
+                            @include flex-center;
+                            height: 36px;
+                            width: 36px;
+                            border-radius: 50%;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .cta-img-wrap-11{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        @include breakpoint(lg){
+            right: -40px;
+        }
+        @include breakpoint(md){
+            position: relative;
+            margin-top: 30px;
+        }
+        @include breakpoint(sm){
+            display: none;
+        }
+    }
+    .cta-shape-1{
+        position: absolute;
+        bottom: 0;
+        right: 6%;
+        z-index: -1;
+        @include breakpoint(sm){
+            display: none;
+        }
+    }
+}
+
+// Offer CSS
+
+.offer-section{
+    background-color: #F2F4F7;
+}
+
+.offer-nav{
+    border: none;
+    display: inline-flex;
+    flex-direction: column;
+    row-gap: 10px;
+    .nav-item{
+        border: none;
+        .nav-link{
+            border: none;
+            margin: 0;
+            padding: 0;
+            .offer-tab-btn{
+                background-color: var(--ed-color-theme-primary);
+                text-align: left;
+                display: grid;
+                grid-template-columns: 60px 1fr;
+                grid-gap: 20px;
+                padding: 21.5px  45px;
+                border-radius: 10px;
+                overflow: hidden;
+                position: relative;
+                z-index: 1;
+                @include breakpoint(sm){
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    padding: 40px 20px;
+                }
+                &:before{
+                    background: linear-gradient(90deg, #07A698 0%, #162726 100%);
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    border-radius: 10px;
+                    visibility: hidden;
+                    opacity: 0;
+                    @include transition(all 0.3s ease-in-out);
+                }
+                .icon{
+                    background-color: var(--ed-color-common-white);
+                    height: 60px;
+                    width: 60px;
+                    @include flex-center;
+                    border-radius: 50%;
+                }
+                .content{
+                    .title{
+                        color: var(--ed-color-common-white);
+                        font-size: 24px;
+                        font-weight: 600;
+                        margin-bottom: 5px;
+                    }
+                    p{
+                        color: var(--ed-color-common-white);
+                    }
+                }
+            }
+            &.active{
+                .offer-tab-btn{
+                    &:before{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.offer-img{
+    height: 562px;
+    width: 100%;
+    position: relative;
+    @include breakpoint(md){
+        margin-top: 40px;
+    }
+    @include breakpoint(sm){
+        height: 400px;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+        border: 4px solid var(--ed-color-common-white);
+    }
+    .offer-video{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        a{
+            background-color: var(--ed-color-common-white);
+            color: var(--ed-color-theme-primary);
+            font-size: 30px;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            @include flex-center;
+            &:hover{
+                background-color: var(--ed-color-theme-primary);
+                color: var(--ed-color-common-white);
+            }
+        }
+    }
+}
+
+// Testi CSS
+
+.testi-11{
+    background-color: #162726;
+    .shape{
+        top: auto;
+        bottom: 0;
+    }
+}
+
+.testi-item-9{
+    background-color: #F7F7F7;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    .item-shape{
+        background: rgba(7, 166, 152, 0.46);
+        filter: blur(175px);
+        height: 284px;
+        width: 284px;
+        border-radius: 50%;
+        position: absolute;
+        top: -120px;
+        right: -50px;
+        z-index: -1;
+    }
+}
+
+
+/* !END: Home 11 CSS */

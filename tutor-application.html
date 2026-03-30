@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+
+        <!-- Site Title -->
+        <title>Bestolap Tuition | Inspire. Learn. Achieve.</title>
+
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+        <!-- CSS here -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+        <link rel="stylesheet" href="assets/css/venobox.min.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/keyframe-animation.css">
+        <link rel="stylesheet" href="assets/css/odometer.min.css">
+        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <link rel="stylesheet" href="assets/css/daterangepicker.css">
+        <link rel="stylesheet" href="assets/css/swiper.min.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+		
+    </head>
+
+    <body>
+
+        <div id="preloader">
+            <div class="spinner-logo"><img src="assets/img/favicon.png" alt="logo"></div>
+            <div class="spinner"></div>
+        </div>
+        <!-- ./ preloader -->
+<section class="page-header">
+            <div class="bg-item">
+                <div class="bg-img" data-background="assets/img/bg-img/page-header-bg.png"></div>
+                <div class="overlay"></div>
+                <div class="shapes">
+                    <div class="shape shape-1"><img src="assets/img/shapes/page-header-shape-1.png" alt="shape"></div>
+                    <div class="shape shape-2"><img src="assets/img/shapes/page-header-shape-2.png" alt="shape"></div>
+                    <div class="shape shape-3"><img src="assets/img/shapes/page-header-shape-3.png" alt="shape"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="page-header-content">
+                    <h1 class="title">Online Tutor Job Application</h1>
+                    <h4 class="sub-title"><a class="home" href="index.html">Home </a><span class="icon">/</span><a class="inner-page" href="tutor-application.html"> Register</a></h4>
+                </div>
+            </div>
+        </section>
+        <!-- ./ page-header -->
+        <section class="contact-section pt-120 pb-120">
+            <div class="container">
+                <div class="row gy-lg-0 gy-5">
+                    <div class="col-lg-7">
+                        <div class="blog-contact-form contact-form">
+                            <p class="mb-30 mt-10">Please complete this form carefully. All information provided will remain confidential and used strictly for Recruitment purposes.</p>
+							
+							<h2 class="title mb-20">Personal Information</h2>
+                            
+                            <div class="request-form">
+                                <form id="tutorForm" enctype="multipart/form-data" method="post" class="form-horizontal" netlify>
+                                  <div class="form-group row">
+										<div class="col-md-6">
+                                            <div class="form-item">
+                                                <input type="text" name="firstName" class="form-control" placeholder="First Name *" required>
+                                                <div class="icon"><i class="fa-regular fa-user"></i></div>
+                                            </div>
+                                        </div>
+									  	<div class="col-md-6">
+                                            <div class="form-item">
+                                                <input type="text" name="lastName" class="form-control" placeholder="Last Name *" required>
+                                                <div class="icon"><i class="fa-regular fa-user"></i></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-item">
+                                                <input type="tel" id="Phone" name="phone" class="form-control" placeholder="Whatsapp Number" required>
+												<div class="icon"><i class="fa-regular fa-phone"></i></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-item">
+                                                <input type="email" id="Email" name="email" class="form-control" placeholder="Email Address" required>
+												<div class="icon"><i class="fa-regular fa-envelope"></i></div>
+                                            </div>
+                                        </div>
+									    <div class="col-md-6">
+                                            <div class="form-item">
+                                                <select id="Gender" name="gender" class="form-control" placeholder="Gender" required>
+													<option value="">Gender</option>
+													<option value="male">Male</option>
+													<option value="female">Female</option>
+												</select>
+											</div>
+                                        </div>
+									  	
+                                    </div>
+									<h2 class="title mt-40 mb-20">Location</h2>
+									<div class="form-group row">
+										<div class="col-md-6">
+                                            <div class="form-item">
+                                                <select id="country" name="country" class="form-control" required>
+												  <option value="">-- Select Country --</option>
+												</select>
+                                            </div>
+                                        </div>
+										<div class="col-md-6">
+                                            <div class="form-item">
+                                                <select id="State" name="state" required class="form-control" disabled>
+												  <option value="">-- Select State / Province --</option>
+												</select>
+                                            </div>
+                                        </div>
+                                  </div>
+									<h2 class="title mt-40 mb-20">Curriculum & Equipment</h2>
+									<div class="form-group row">
+                                        <div class="col-md-12">
+                                            <div class="form-item">
+												<label>British Curriculum Experience *</label><br>
+                                                    <input type="radio" name="britishExperience" value="Yes" required> Yes
+                                                    <input type="radio" name="britishExperience" value="No"> No
+                                                    <br><br>
+
+                                                    <label>American Curriculum Experience *</label><br>
+                                                    <input type="radio" name="americanExperience" value="Yes" required> Yes
+                                                    <input type="radio" name="americanExperience" value="No"> No
+                                                    <br><br>
+
+                                                    <label>Do you meet PC requirements? *</label><br>
+                                                    <input type="radio" name="pcRequirement" value="Yes" required> Yes
+                                                    <input type="radio" name="pcRequirement" value="No"> No
+                                                    <br><br>
+
+                                                    <label>Stable 4G Internet (5Mbps min)? *</label><br>
+                                                    <input type="radio" name="internetRequirement" value="Yes" required> Yes
+                                                    <input type="radio" name="internetRequirement" value="No"> No
+                                                    <br><br>
+
+                                                    <label>Troubleshoot technical issues? *</label><br>
+                                                    <input type="radio" name="troubleshooting" value="Yes" required> Yes
+                                                    <input type="radio" name="troubleshooting" value="No"> No
+                                                    <br><br>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="title mt-40 mb-20">Technical Skills</h2>
+                                    <div class="form-group row">
+                                        <div class="col-md-6">
+                                            <div class="form-item">
+                                               <select name="digitalPen" class="form-control mb-3" required>
+                                                    <option value="">Digital Pen Skill</option>
+                                                    <option>Expert</option>
+                                                    <option>Intermediate</option>
+                                                    <option>Beginner</option>
+                                               </select>	
+                                            </div>
+                                        </div>
+										<div class="col-md-6">
+                                            <div class="form-item">
+                                                <select name="oneDriveSkill" class="form-control mb-3" required>
+                                                    <option value="">Microsoft OneDrive Skill</option>
+                                                    <option>Expert</option>
+                                                    <option>Intermediate</option>
+                                                    <option>Beginner</option>
+                                                </select>	
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-item">
+                                                <select name="oneNoteSkill" class="form-control mb-3" required>
+                                                    <option value="">Microsoft OneNote Skill</option>
+                                                    <option>Expert</option>
+                                                    <option>Intermediate</option>
+                                                    <option>Beginner</option>
+                                                </select>	
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-item">
+                                                <select name="formsSkill" class="form-control mb-3" required>
+                                                    <option value="">Microsoft Forms Skill</option>
+                                                    <option>Expert</option>
+                                                    <option>Intermediate</option>
+                                                    <option>Beginner</option>
+                                                </select>	
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-item">
+                                                <select name="teamsSkill" class="form-control mb-3" required>
+                                                    <option value="">Microsoft Teams Skill</option>
+                                                    <option>Expert</option>
+                                                    <option>Intermediate</option>
+                                                    <option>Beginner</option>
+                                                </select>	
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <h2 class="title mt-40 mb-20">Teaching Experience</h2>
+                                        <br>		
+                                        <div class="col-md-12">
+                                            <div class="form-item">
+                                                <label>Years of Online Teaching Experience *</label><br>
+												<input type="number" name="yearsExperience" class="form-control mb-3" placeholder="Years" required>
+
+                                            </div>
+                                      	</div>
+										<div class="col-md-12">
+                                            <div class="form-item">
+												<label>Classes Experienced In *</label><br>
+                                                    <input type="checkbox" name="classes" value="Reception"> Reception<br>
+                                                    <input type="checkbox" name="classes" value="KS1"> Year 1-2 (KS1)<br>
+                                                    <input type="checkbox" name="classes" value="KS2"> Year 3-6 (KS2)<br>
+                                                    <input type="checkbox" name="classes" value="KS3"> Year 7-9 (KS3)<br>
+                                                    <input type="checkbox" name="classes" value="KS4"> Year 10-11 (KS4)<br>
+                                                    <input type="checkbox" name="classes" value="KS5"> Sixth Form (KS5)<br>
+
+                                                    <br>
+                                            </div>
+                                        </div>
+								<div class="col-md-12">
+                                            <div class="form-item">
+												<label>Subject Expertise *</label><br>
+                                                <input type="checkbox" name="subjects" value="Maths/NVR"> Mathematics / NVR<br>
+                                                <input type="checkbox" name="subjects" value="English/VR"> English / VR<br>
+                                                <input type="checkbox" name="subjects" value="Science"> Science<br>
+                                            </div>
+                                        </div>
+                                  </div>
+                                  <br>
+                                  <div class="form-group row">
+                                   <h2 class="title mt-40 mb-20">Video Submission</h2>
+                                  <div class="col-md-12">
+                                            <div class="form-item">
+												<p>
+                                                    Please share a short MP4 video demonstrating a lesson on a topic in your area of subject expertise.
+                                                </p>
+                                                
+                                                <hr>
+
+                                                <label>Upload Lesson Demo (MP4, max 10MB) *</label>
+                                                <input type="file" name="demoVideo" accept="video/mp4" required class="form-control mb-3">
+                                                <p id="fileError" class="error-text"></p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                 
+                            <div class="form-group row">
+                                   <h2 class="title mt-40 mb-20">📄 Document Submission</h2>
+                                  <div class="col-md-12">
+                                            <div class="form-item">
+												<p>
+                                                    Please combine the following documents into <strong>one single PDF file</strong> 
+                                                    and ensure that the file is saved using your 
+                                                    <strong>First Name and Last Name (Surname)</strong> before uploading.
+                                                </p>
+                                                
+                                                <hr>
+
+                                                <ol>
+                                                    <li><strong>Resume</strong></li>
+                                                    <li><strong>NIN Card or NIN Slip</strong></li>
+                                                    <li><strong>BSc and PGDE Certificate(s)</strong> OR <strong>B.Ed Certificate</strong></li>
+                                                    <li><strong>SSCE Certificate (WAEC / NECO / NABTEB)</strong></li>
+                                                </ol>
+
+                                                <div class="important-note">
+                                                    <p>
+                                                    ⚠️ <strong>Important:</strong> Please ensure all documents are:
+                                                    </p>
+                                                    <ul>
+                                                    <li>Clear and readable</li>
+                                                    <li>Properly scanned</li>
+                                                    <li>Arranged in the order listed above</li>
+                                                    <li>Combined into one PDF file only</li>
+                                                    </ul>
+                                                </div>
+
+                                                <hr>
+
+                                                <label>Upload Combined Documents (PDF, max 1MB) *</label>
+                                                <input type="file" name="documents" accept="application/pdf" required class="form-control mb-3">
+                                            </div>
+                                        </div>
+                                        </div>
+                                  </div>
+                                    <div class="submit-btn">
+                                        <button id="submit" class="ed-primary-btn" type="submit">Submit Application</button>
+                                    </div>
+								</div>
+                                </form>
+							</div>
+						</div>
+					</div>
+                </div>
+    		</div>
+			
+						
+			
+						
+						
+        </section>
+        <!-- ./ contact-section -->
+
+        <footer class="footer-section footer-6 pt-120">
+            <div class="bg-img" data-background="assets/img/new-update/shapes/footer-bg-shape.png"></div>
+            <div class="footer-top-wrap">
+                <div class="container">
+                    <div class="row footer-wrap">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-widget">
+                                <h3 class="widget-header">Get in touch!</h3>
+                                <p class="mb-30">Have questions or need help finding the right tutor? Our support team is here to help you every step of the way.</p>
+                                <div class="footer-contact">
+                                    <span class="number"><i class="fa-regular fa-phone"></i><a href="https://wa.me/2347085500545">+234 708 550 0545</a></span>
+                                    <a href="mailto:info@bestolaptuition.com" class="mail">info@bestolaptuition.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-widget widget-2">
+                                <h3 class="widget-header">Company Info</h3>
+                                <ul class="footer-list">
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="tutor-application.html">Become A Tutor</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-widget widget-2">
+                                <h3 class="widget-header">Useful Links</h3>
+                                <ul class="footer-list">
+                                    <li><a href="#courses">All Classes</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-widget">
+                                <h3 class="widget-header">Recent Post</h3>
+                                <div class="sidebar-post mb-20">
+                                </div>
+                                <div class="sidebar-post">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-area">
+                <div class="container">
+                    <div class="copyright-content">
+                        <p>Copyright © <span id="currentYear"></span> Bestolap Tuition. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ./ footer-section -->
+
+        <div id="scrollup">
+            <button id="scroll-top" class="scroll-to-top"><i class="fa-regular fa-arrow-up-long"></i></button>
+        </div>
+        <!--scrollup-->
+
+        <!-- JS here -->
+        <script src="assets/js/vendor/jquary-3.6.0.min.js"></script>
+        <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="assets/js/vendor/bootstrap-bundle.js"></script>
+        <script src="assets/js/vendor/jquery.isotope.js"></script>
+        <script src="assets/js/vendor/waypoints.min.js"></script>
+        <script src="assets/js/vendor/moment.min.js"></script>
+        <script src="assets/js/vendor/daterangepicker.min.js"></script>
+        <script src="assets/js/vendor/venobox.min.js"></script>
+        <script src="assets/js/vendor/odometer.min.js"></script>
+        <script src="assets/js/vendor/countdown.js"></script>
+        <script src="assets/js/vendor/meanmenu.js"></script>
+        <script src="assets/js/vendor/smooth-scroll.js"></script>
+        <script src="assets/js/vendor/imagesloaded-pkgd.js"></script>
+        <script src="assets/js/vendor/wow.min.js"></script>
+        <script src="assets/js/vendor/jquery.carouselTicker.js"></script>
+        <script src="assets/js/vendor/nice-select.js"></script>
+        <script src="assets/js/vendor/swiper.min.js"></script>
+        <script src="assets/js/contact.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var currentYear = new Date().getFullYear();
+                document.getElementById('currentYear').textContent = currentYear;
+            });
+        </script>
+
+
+
+<script>
+async function loadCountries() {
+  const res = await fetch("/api/location/countries");
+  const countries = await res.json();
+
+  const countrySelect = document.getElementById("country");
+
+  countries.forEach(country => {
+    const option = document.createElement("option");
+    option.value = country.isoCode;
+    option.textContent = country.name;
+    countrySelect.appendChild(option);
+  });
+}
+
+document.getElementById("country").addEventListener("change", async function () {
+
+  const stateSelect = document.getElementById("state");
+  stateSelect.innerHTML = "<option value=''>-- Select State --</option>";
+
+  if (!this.value) return;
+
+  const res = await fetch(`/api/location/states/${this.value}`);
+  const states = await res.json();
+
+  states.forEach(state => {
+    const option = document.createElement("option");
+    option.value = state.name;
+    option.textContent = state.name;
+    stateSelect.appendChild(option);
+  });
+
+  stateSelect.disabled = false;
+});
+
+loadCountries();
+</script>
+
+
+	<script>
+document.getElementById("tutorForm").addEventListener("submit", async function(e){
+e.preventDefault();
+
+const formData = new FormData(this);
+
+const res = await fetch("/api/tutor/apply", {
+method: "POST",
+body: formData
+});
+
+const data = await res.json();
+
+if(data.success){
+alert("Application submitted successfully!");
+this.reset();
+}else{
+alert("Error submitting application.");
+}
+});
+</script>
+
+    </body>
+</html>
