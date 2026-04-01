@@ -20,6 +20,7 @@ coverage/
 # Build output
 dist/
 build/
+out/
 
 # Invoice PDFs (important for your LMS backend)
 invoices/
@@ -39,3 +40,15 @@ Thumbs.db
 # Package lock (optional depending on team policy)
 package-lock.json
 yarn.lock
+"node_modules/" 
+".env" 
+"server/node_modules/" 
+"server/.env" 
+"node_modules/" 
+".env" 
+"server/node_modules/" 
+"server/.env" 
+"node_modules/" 
+".env" 
+"server/node_modules/" 
+"server/.env" 
