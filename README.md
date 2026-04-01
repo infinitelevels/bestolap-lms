@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # bestolap-lms
 # 🎓 Bestolap Tuition LMS
 
@@ -250,3 +251,6 @@ For setup or technical support:
 ---
 
 > Empowering students with flexible, world-class education 🌍
+=======
+"# bestolap-lms" 
+>>>>>>> 7978c29 (first commit)
